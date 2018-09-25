@@ -7,4 +7,6 @@ Dans ce TP vous allez concevoir et implémenter diverses améliorations dans le 
 
 1. Cette page présente une **brève description du composant**, ainsi que **l'API exposée par ce dernier**.
 
+![Api freetext](./images/free-text-api.png)
+
 
