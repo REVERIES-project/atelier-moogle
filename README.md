@@ -34,7 +34,7 @@ Dans ce TP vous allez concevoir et implémenter diverses améliorations dans le 
 
 Rappel : la modification d'un composant de jeu sera refletée dans **l'editeur MOGGLE** (destiné aux concepteurs de jeux) et dans **MOGGLE Game player** (destiné aux joueurs). 
 
-Les modifications que vous aller réaliser seront **uniquement en *localhost* sur votre session**. Pour qu'elles soient intégrées dans l'éditeur **vous auriez à réaliser une *pull request* que le/les propriétaires du repository accepteront**. L'utilisation de github sort du cadre de cet atelier, vous pouvez plus d'informations [ici](https://services.github.com/on-demand/github-cli/open-pull-request-github).
+Les modifications que vous allez réaliser seront **uniquement en *localhost* sur votre session**. Pour qu'elles soient intégrées dans l'éditeur **vous auriez à réaliser une *pull request* que le/les propriétaires du repository accepteront**. L'utilisation de github sort du cadre de cet atelier, vous trouverez plus d'informations [ici](https://services.github.com/on-demand/github-cli/open-pull-request-github).
 
 
 * Commencer par ouvrir une fenêtre terminal (Application/Terminal).
@@ -43,7 +43,7 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
      mkdir Dev
      cd Dev
      ```
-* Depuis le dossier Dev, **effectuer un *git clone* du repository de *free-text-question*. Installer ensuite les **dépendances bower** du composant
+* Depuis le dossier Dev, **effectuer un *git clone* du repository de *free-text-question*. Installer ensuite les *dépendances bower* du composant**
      ```bash
      git clone https://github.com/REVERIES-project/free-text-question.git
      cd free-text-question
@@ -77,7 +77,9 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
 
 * On souhaite effectuer deux améliorations
   * Rendre la validation des réponses non sensible à la casse
-  * Rendre la validation des réponses non sensible à la présence d'espace en fin de réponse
+  * Rendre la validation des réponses non sensible à la présence d'espace en début ou fin de réponse
+
+### Amélioration 1 : réponses non sensibles à la casses
 
 * Etudier le fonctionnement de la fonction **validate** dans *free-text-question.html*. 
   * En utilisant la fonction javascript native toLowerCase telle que
@@ -86,8 +88,26 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
   x.toLowerCase()==="reponse" //true
   ```
   modifier la fonction pour n'être pas sensible à la casse des réponse.
-  * Vérifier que la modification fonctionne correctement via la page démo du composant. Il suffira d'entrer la réponse correcte avec une casse différente.
-  
+  * Vérifier que la modification fonctionne correctement via la page démo du composant. 
+    * Il suffira d'entrer la réponse correcte avec une casse différente.
+
+### Amélioration 2 : réponse non sensibles à la présence de *trailing space*
+
+* Les *leading space* et *trailing space* sont des caractères de type *whitespace* (tab, espace, no-break space...) en début ou en fin de chaine de caractère. Ces caractères posent souvent problème et javascript propose une méthode native *trim* pour les faire disparaitre telle que
+  ```javascript
+  var x=" Reponse    "
+  x.trim()==="reponse" //true
+  ```
+ * En utilisant la méthode *trim* modifier la méthode validate de façon à ne pas être sensible à la présence de *trailing space*
+
+   * Vérifier que la modification fonctionne correctement via la page démo du composant. 
+     * Il suffira d'entrer la réponse avec un espace à la fin.
+
+
+
+
+
+
 
 
 
