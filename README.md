@@ -30,7 +30,7 @@ Dans ce TP vous allez concevoir et implémenter diverses améliorations dans le 
   * **Se montrer satisfait** si on devine correctement
   * **Cacher sa frustration** et essayer encore en cas de réponse incorrecte
 
-## Deuxième partie : amélioration du composant free-text-question 
+## Deuxième partie : installer les sources du composant localement 
 
 Rappel : la modification d'un composant de jeu sera refletée dans **l'editeur MOGGLE** (destiné aux concepteurs de jeux) et dans **MOGGLE Game player** (destiné aux joueurs). 
 
@@ -43,7 +43,7 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
      mkdir Dev
      cd Dev
      ```
-* Depuis le dossier Dev, **effectuer un *git clone* du repository de *free-text-question***. Installer ensuite les **dépendances bower** du composant
+* Depuis le dossier Dev, **effectuer un *git clone* du repository de *free-text-question*. Installer ensuite les **dépendances bower** du composant
      ```bash
      git clone https://github.com/REVERIES-project/free-text-question.git
      cd free-text-question
@@ -67,6 +67,30 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
   * *Application/Dévelopement/Visual Studio Code*
   * Ouvrir le répertoire du composant : *Dev/free-text-question*
 ![Interface vscode](./images/vscode.png)
+
+
+* L'interface de *Visual studio code* présente à gauche la liste des fichiers. Les fichiers qui vont nous intéresser pour le workshop sont *free-text-question.html* et *demo/index.html*
+
+
+
+## Troisième partie : effectuer les améliorations
+
+* On souhaite effectuer deux améliorations
+  * Rendre la validation des réponses non sensible à la casse
+  * Rendre la validation des réponses non sensible à la présence d'espace en fin de réponse
+
+* Etudier le fonctionnement de la fonction **validate** dans *free-text-question.html*. 
+  * En utilisant la fonction javascript native toLowerCase telle que
+  ```javascript
+  var x="Reponse"
+  x.toLowerCase()==="reponse" //true
+  ```
+  modifier la fonction pour n'être pas sensible à la casse des réponse.
+  * Vérifier que la modification fonctionne correctement via la page démo du composant. Il suffira d'entrer la réponse correcte avec une casse différente.
+  
+
+
+
 
 
 
