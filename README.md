@@ -46,6 +46,7 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
 * Depuis le dossier Dev, **effectuer un *git clone* du repository de *free-text-question***. Installer ensuite les **dépendances bower** du composant
      ```bash
      git clone https://github.com/REVERIES-project/free-text-question.git
+     cd free-text-question
      bower install 
      ```
 * Le composant est **maintenant installé localement** et peut être **modifié et testé facilement. Lancer le serveur Polymer local**
@@ -62,11 +63,13 @@ Les modifications que vous aller réaliser seront **uniquement en *localhost* su
 
 * Ouvrir l'adresse correspondant à *reusable component* (ctrl + clic). Le navigateur Firefox s'ouvre à l'adresse donnée. **La page est la même que la page de *documentation/démo* de github**. Cependant vous **pouvez maintenant modifier le code et voir les modifications par un simple rafraichissement** du browser (F5).
 
-  * Ouvrir une nouvelle fenêtre de terminal et se rendre dans le répertoire du composant pour lancer *Visual Studio Code*.
-    ```bash
-     cd Dev/free-text-question
-     code .
-     ```
+* Lancer l'éditeur *Visual Studio Code* 
+  * *Application/Dévelopement/Visual Studio Code*
+  * Ouvrir le répertoire du composant : *Dev/free-text-question*
+![Interface vscode](./images/vscode.png)
+
+
+
 
 
   
